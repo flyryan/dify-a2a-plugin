@@ -31,7 +31,7 @@ Without the A2A protocol, each agent platform operates in isolation. With this p
 
 **Community Edition Users:**
 
-This plugin is not yet published to the Dify Marketplace and requires disabling signature verification for installation.
+This plugin has been submitted to the Dify Marketplace ([PR #1607](https://github.com/langgenius/dify-plugins/pull/1607)) and is currently under review. Until approved, it requires disabling signature verification for installation.
 
 **Requirements:**
 - Dify Community Edition v1.0.0 or higher
@@ -40,7 +40,7 @@ This plugin is not yet published to the Dify Marketplace and requires disabling 
 
 **Cloud Edition Users:**
 
-This plugin cannot currently be installed on Dify Cloud. We plan to submit to the Marketplace in the future.
+This plugin will be available on Dify Cloud once marketplace review is approved. [Track submission status →](https://github.com/langgenius/dify-plugins/pull/1607)
 
 ---
 
@@ -230,9 +230,14 @@ Later: Check status with Get Task Status
 
 ## 📥 Installation
 
-### From Dify Marketplace (Coming Soon)
+### From Dify Marketplace (Under Review)
 
-This plugin is pending submission to the Dify Marketplace. Once approved, it will be available for one-click installation.
+This plugin has been submitted to the Dify Marketplace and is currently under review ([PR #1607](https://github.com/langgenius/dify-plugins/pull/1607)). Once approved, it will be available for one-click installation.
+
+**Review Timeline:**
+- ⏱️ Initial review: Within 1 week of submission (Nov 24, 2025)
+- 📋 Status: Awaiting maintainer review
+- 🔗 [Track progress](https://github.com/langgenius/dify-plugins/pull/1607)
 
 ### For Community Edition (Self-Hosted)
 
@@ -701,10 +706,17 @@ For complete privacy details, see [PRIVACY.md](PRIVACY.md).
 
 ---
 
-## 🚀 Marketplace Publication
+## 🚀 Marketplace Submission Status
 
-We plan to submit this plugin to the Dify Marketplace. Once approved, the plugin will:
+**Current Status:** ✅ Submitted and under review
 
+This plugin has been officially submitted to the Dify Marketplace on **November 24, 2025**.
+
+- 📋 **Submission PR:** [#1607](https://github.com/langgenius/dify-plugins/pull/1607)
+- ⏱️ **Review Timeline:** Initial review within 1 week
+- 📍 **Current Stage:** Awaiting maintainer review
+
+**Once approved, the plugin will:**
 - ✅ Be officially signed (no `FORCE_VERIFYING_SIGNATURE` needed)
 - ✅ Work on both Community and Cloud editions
 - ✅ Appear on [marketplace.dify.ai](https://marketplace.dify.ai/)
@@ -717,7 +729,9 @@ We plan to submit this plugin to the Dify Marketplace. Once approved, the plugin
 - Automatic updates for users
 - No manual environment variable configuration required
 
-Track marketplace submission progress in [Issues](https://github.com/flyryan/dify-a2a-plugin/issues).
+**Stay Updated:**
+- 🔔 [Track submission progress](https://github.com/langgenius/dify-plugins/pull/1607) - View PR status and reviewer comments
+- 💬 [Ask questions or report issues](https://github.com/flyryan/dify-a2a-plugin/issues) - Plugin support and feedback
 
 ---
 
