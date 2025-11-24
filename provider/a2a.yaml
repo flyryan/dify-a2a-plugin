@@ -1,0 +1,370 @@
+identity:
+  author: ryan_duff
+  name: a2a
+  label:
+    en_US: A2A Client
+    zh_Hans: A2A 客户端
+  description:
+    en_US: Connect to other agents using the Agent-to-Agent (A2A) protocol. Delegate tasks to specialized domain experts.
+    zh_Hans: 使用 Agent-to-Agent (A2A) 协议连接到其他智能体。将任务委派给专业领域专家。
+  icon: a2a-logo-black.svg
+  tags:
+    - productivity
+    - utilities
+
+credentials_for_provider:
+  # Agent 1
+  agent_1_name:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 1: Name"
+      zh_Hans: "智能体 1: 名称"
+    placeholder:
+      en_US: "sales_agent"
+      zh_Hans: "销售智能体"
+    help:
+      en_US: "Unique identifier for this agent (e.g., 'sales', 'research'). Leave blank if not configuring this agent slot."
+      zh_Hans: "此智能体的唯一标识符（例如：'sales'、'research'）。如果不配置此智能体槽，请留空。"
+
+  agent_1_url:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 1: Base URL"
+      zh_Hans: "智能体 1: 基础 URL"
+    placeholder:
+      en_US: "https://api.example.com"
+      zh_Hans: "https://api.example.com"
+    help:
+      en_US: "A2A protocol endpoint base URL. Required if agent name is provided."
+      zh_Hans: "A2A 协议端点基础 URL。如果提供了智能体名称，则必填。"
+
+  agent_1_auth_type:
+    type: select
+    required: false
+    default: "none"
+    label:
+      en_US: "Agent 1: Auth Type"
+      zh_Hans: "智能体 1: 认证类型"
+    options:
+      - value: "none"
+        label:
+          en_US: "No Authentication"
+          zh_Hans: "无需认证"
+      - value: "bearer"
+        label:
+          en_US: "Bearer Token"
+          zh_Hans: "Bearer 令牌"
+      - value: "api-key"
+        label:
+          en_US: "API Key"
+          zh_Hans: "API 密钥"
+      - value: "basic"
+        label:
+          en_US: "Basic Auth"
+          zh_Hans: "基本认证"
+    help:
+      en_US: "Authentication method required by this agent's A2A server."
+      zh_Hans: "此智能体 A2A 服务器所需的认证方法。"
+
+  agent_1_api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: "Agent 1: API Key/Token"
+      zh_Hans: "智能体 1: API 密钥/令牌"
+    placeholder:
+      en_US: "sk-..."
+      zh_Hans: "sk-..."
+    help:
+      en_US: "API key or token for authentication. Required if auth type is not 'none'."
+      zh_Hans: "用于认证的 API 密钥或令牌。如果认证类型不是'无需认证'，则必填。"
+
+  agent_1_description:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 1: Description"
+      zh_Hans: "智能体 1: 描述"
+    placeholder:
+      en_US: "Sales expert - handles product questions and quotes"
+      zh_Hans: "销售专家 - 处理产品问题和报价"
+    help:
+      en_US: "Human-readable description of what this agent does."
+      zh_Hans: "此智能体功能的可读描述。"
+
+  # Agent 2
+  agent_2_name:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 2: Name"
+      zh_Hans: "智能体 2: 名称"
+    placeholder:
+      en_US: "research_agent"
+      zh_Hans: "研究智能体"
+
+  agent_2_url:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 2: Base URL"
+      zh_Hans: "智能体 2: 基础 URL"
+    placeholder:
+      en_US: "https://api.example.com"
+      zh_Hans: "https://api.example.com"
+
+  agent_2_auth_type:
+    type: select
+    required: false
+    default: "none"
+    label:
+      en_US: "Agent 2: Auth Type"
+      zh_Hans: "智能体 2: 认证类型"
+    options:
+      - value: "none"
+        label:
+          en_US: "No Authentication"
+          zh_Hans: "无需认证"
+      - value: "bearer"
+        label:
+          en_US: "Bearer Token"
+          zh_Hans: "Bearer 令牌"
+      - value: "api-key"
+        label:
+          en_US: "API Key"
+          zh_Hans: "API 密钥"
+      - value: "basic"
+        label:
+          en_US: "Basic Auth"
+          zh_Hans: "基本认证"
+
+  agent_2_api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: "Agent 2: API Key/Token"
+      zh_Hans: "智能体 2: API 密钥/令牌"
+    placeholder:
+      en_US: "sk-..."
+      zh_Hans: "sk-..."
+
+  agent_2_description:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 2: Description"
+      zh_Hans: "智能体 2: 描述"
+    placeholder:
+      en_US: "Research specialist - finds and analyzes information"
+      zh_Hans: "研究专家 - 查找和分析信息"
+
+  # Agent 3
+  agent_3_name:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 3: Name"
+      zh_Hans: "智能体 3: 名称"
+    placeholder:
+      en_US: "support_agent"
+      zh_Hans: "支持智能体"
+
+  agent_3_url:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 3: Base URL"
+      zh_Hans: "智能体 3: 基础 URL"
+    placeholder:
+      en_US: "https://api.example.com"
+      zh_Hans: "https://api.example.com"
+
+  agent_3_auth_type:
+    type: select
+    required: false
+    default: "none"
+    label:
+      en_US: "Agent 3: Auth Type"
+      zh_Hans: "智能体 3: 认证类型"
+    options:
+      - value: "none"
+        label:
+          en_US: "No Authentication"
+          zh_Hans: "无需认证"
+      - value: "bearer"
+        label:
+          en_US: "Bearer Token"
+          zh_Hans: "Bearer 令牌"
+      - value: "api-key"
+        label:
+          en_US: "API Key"
+          zh_Hans: "API 密钥"
+      - value: "basic"
+        label:
+          en_US: "Basic Auth"
+          zh_Hans: "基本认证"
+
+  agent_3_api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: "Agent 3: API Key/Token"
+      zh_Hans: "智能体 3: API 密钥/令牌"
+    placeholder:
+      en_US: "sk-..."
+      zh_Hans: "sk-..."
+
+  agent_3_description:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 3: Description"
+      zh_Hans: "智能体 3: 描述"
+    placeholder:
+      en_US: "Customer support specialist"
+      zh_Hans: "客户支持专家"
+
+  # Agent 4
+  agent_4_name:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 4: Name"
+      zh_Hans: "智能体 4: 名称"
+    placeholder:
+      en_US: "analytics_agent"
+      zh_Hans: "分析智能体"
+
+  agent_4_url:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 4: Base URL"
+      zh_Hans: "智能体 4: 基础 URL"
+    placeholder:
+      en_US: "https://api.example.com"
+      zh_Hans: "https://api.example.com"
+
+  agent_4_auth_type:
+    type: select
+    required: false
+    default: "none"
+    label:
+      en_US: "Agent 4: Auth Type"
+      zh_Hans: "智能体 4: 认证类型"
+    options:
+      - value: "none"
+        label:
+          en_US: "No Authentication"
+          zh_Hans: "无需认证"
+      - value: "bearer"
+        label:
+          en_US: "Bearer Token"
+          zh_Hans: "Bearer 令牌"
+      - value: "api-key"
+        label:
+          en_US: "API Key"
+          zh_Hans: "API 密钥"
+      - value: "basic"
+        label:
+          en_US: "Basic Auth"
+          zh_Hans: "基本认证"
+
+  agent_4_api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: "Agent 4: API Key/Token"
+      zh_Hans: "智能体 4: API 密钥/令牌"
+    placeholder:
+      en_US: "sk-..."
+      zh_Hans: "sk-..."
+
+  agent_4_description:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 4: Description"
+      zh_Hans: "智能体 4: 描述"
+    placeholder:
+      en_US: "Data analytics specialist"
+      zh_Hans: "数据分析专家"
+
+  # Agent 5
+  agent_5_name:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 5: Name"
+      zh_Hans: "智能体 5: 名称"
+    placeholder:
+      en_US: "marketing_agent"
+      zh_Hans: "营销智能体"
+
+  agent_5_url:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 5: Base URL"
+      zh_Hans: "智能体 5: 基础 URL"
+    placeholder:
+      en_US: "https://api.example.com"
+      zh_Hans: "https://api.example.com"
+
+  agent_5_auth_type:
+    type: select
+    required: false
+    default: "none"
+    label:
+      en_US: "Agent 5: Auth Type"
+      zh_Hans: "智能体 5: 认证类型"
+    options:
+      - value: "none"
+        label:
+          en_US: "No Authentication"
+          zh_Hans: "无需认证"
+      - value: "bearer"
+        label:
+          en_US: "Bearer Token"
+          zh_Hans: "Bearer 令牌"
+      - value: "api-key"
+        label:
+          en_US: "API Key"
+          zh_Hans: "API 密钥"
+      - value: "basic"
+        label:
+          en_US: "Basic Auth"
+          zh_Hans: "基本认证"
+
+  agent_5_api_key:
+    type: secret-input
+    required: false
+    label:
+      en_US: "Agent 5: API Key/Token"
+      zh_Hans: "智能体 5: API 密钥/令牌"
+    placeholder:
+      en_US: "sk-..."
+      zh_Hans: "sk-..."
+
+  agent_5_description:
+    type: text-input
+    required: false
+    label:
+      en_US: "Agent 5: Description"
+      zh_Hans: "智能体 5: 描述"
+    placeholder:
+      en_US: "Marketing and content specialist"
+      zh_Hans: "营销和内容专家"
+
+tools:
+  - tools/list_agents.yaml
+  - tools/get_agent_capabilities.yaml
+  - tools/call_agent.yaml
+  - tools/submit_task.yaml
+  - tools/get_task_status.yaml
+
+extra:
+  python:
+    source: provider/a2a.py

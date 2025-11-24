@@ -1,0 +1,35 @@
+identity:
+  name: submit_task
+  author: ryan_duff
+  label:
+    en_US: Submit Task (Async)
+    zh_Hans: 提交任务 (异步)
+description:
+  human:
+    en_US: Submit a long-running task to a remote A2A agent using message/stream and immediately receive a Task ID. The tool connects via SSE, extracts the Task ID from the first event, and returns without waiting for completion. Use this for complex or time-consuming operations that don't need immediate results. Check task status later using Get Task Status.
+    zh_Hans: 使用 message/stream 向远程 A2A 智能体提交长时间运行的任务并立即接收任务 ID。该工具通过 SSE 连接,从第一个事件中提取任务 ID,并在不等待完成的情况下返回。用于不需要立即结果的复杂或耗时操作。稍后使用获取任务状态检查任务状态。
+  llm: Submit a long-running task to a remote A2A agent asynchronously via message/stream and immediately receive a Task ID without waiting for completion. Use Get Task Status to check results later.
+parameters:
+  - name: agent_name
+    type: string
+    required: true
+    label:
+      en_US: Agent Name
+      zh_Hans: 智能体名称
+    human_description:
+      en_US: The name of the agent to call (must be in the Agents Registry).
+      zh_Hans: 要调用的智能体名称 (必须在智能体注册表中)。
+    form: llm
+  - name: instruction
+    type: string
+    required: true
+    label:
+      en_US: Instruction
+      zh_Hans: 指令
+    human_description:
+      en_US: The task description or instruction.
+      zh_Hans: 任务描述或指令。
+    form: llm
+extra:
+  python:
+    source: tools/submit_task.py

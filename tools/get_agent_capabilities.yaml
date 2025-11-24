@@ -1,0 +1,25 @@
+identity:
+  name: get_agent_capabilities
+  author: ryan_duff
+  label:
+    en_US: Get Agent Capabilities
+    zh_Hans: 获取智能体能力
+description:
+  human:
+    en_US: Fetch the Agent Card from a remote A2A agent to learn what it can do. Returns the agent's name, description, and list of skills.
+    zh_Hans: 从远程 A2A 智能体获取智能体卡片以了解其能力。返回智能体的名称、描述和技能列表。
+  llm: Fetch the Agent Card from a remote A2A agent to learn what it can do.
+parameters:
+  - name: agent_name
+    type: string
+    required: true
+    label:
+      en_US: Agent Name
+      zh_Hans: 智能体名称
+    human_description:
+      en_US: The name of the agent to query (must be in the Agents Registry).
+      zh_Hans: 要查询的智能体名称 (必须在智能体注册表中)。
+    form: llm
+extra:
+  python:
+    source: tools/get_agent_capabilities.py

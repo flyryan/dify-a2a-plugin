@@ -1,0 +1,34 @@
+name: dify-a2a-plugin
+version: 0.1.0
+author: ryan_duff
+type: plugin
+label:
+  en_US: A2A Client
+  zh_Hans: A2A 客户端
+description:
+  en_US: A plugin to connect Dify agents to other agents using the A2A protocol (v0.3.0).
+  zh_Hans: 一个用于使用 A2A 协议 (v0.3.0) 连接 Dify 智能体到其他智能体的插件。
+icon: a2a-logo-black.svg
+resource:
+  memory: 134217728
+  permission:
+    tool:
+      enabled: true
+meta:
+  version: 0.1.0
+  arch:
+    - arm64
+    - amd64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: "main"
+privacy_policy_url: https://github.com/flyryan/dify-a2a-plugin/blob/main/PRIVACY.md
+developer:
+  name: Ryan Duff
+  website: https://github.com/flyryan
+  email: ry@nduff.com
+created_at: 2024-11-23T15:20:00Z
+plugins:
+  tools:
+    - provider/a2a.yaml

@@ -1,0 +1,15 @@
+identity:
+  name: list_agents
+  author: ryan_duff
+  label:
+    en_US: List Available Agents
+    zh_Hans: 列出可用智能体
+description:
+  human:
+    en_US: Discover which A2A agents are available in your registry. Use this to see who you can delegate tasks to.
+    zh_Hans: 发现注册表中可用的 A2A 智能体。使用它来查看可以委派任务给谁。
+  llm: Discover which A2A agents are available in your registry.
+parameters: []
+extra:
+  python:
+    source: tools/list_agents.py

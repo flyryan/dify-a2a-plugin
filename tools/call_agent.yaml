@@ -1,0 +1,35 @@
+identity:
+  name: call_agent
+  author: ryan_duff
+  label:
+    en_US: Call Agent (Sync)
+    zh_Hans: 调用智能体 (同步)
+description:
+  human:
+    en_US: Use the Agent-to-Agent (A2A) Protocol to delegate tasks to specialized domain expert agents. This tool sends a message to a remote A2A agent and waits for its response. Use this when you need expertise beyond your capabilities (e.g., product knowledge, research, analysis).
+    zh_Hans: 使用 Agent-to-Agent (A2A) 协议将任务委派给专业领域专家智能体。此工具向远程 A2A 智能体发送消息并等待其响应。当您需要超出自身能力的专业知识时使用（例如产品知识、研究、分析）。
+  llm: Use the Agent-to-Agent (A2A) Protocol to delegate tasks to specialized domain expert agents. This tool sends a message to a remote A2A agent and waits for its response.
+parameters:
+  - name: agent_name
+    type: string
+    required: true
+    label:
+      en_US: Agent Name
+      zh_Hans: 智能体名称
+    human_description:
+      en_US: The name of the agent to call (must be in the Agents Registry).
+      zh_Hans: 要调用的智能体名称 (必须在智能体注册表中)。
+    form: llm
+  - name: instruction
+    type: string
+    required: true
+    label:
+      en_US: Instruction
+      zh_Hans: 指令
+    human_description:
+      en_US: The message or instruction to send to the agent.
+      zh_Hans: 发送给智能体的消息或指令。
+    form: llm
+extra:
+  python:
+    source: tools/call_agent.py

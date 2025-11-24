@@ -1,0 +1,35 @@
+identity:
+  name: get_task_status
+  author: ryan_duff
+  label:
+    en_US: Get Task Status
+    zh_Hans: 获取任务状态
+description:
+  human:
+    en_US: Check the status of a previously submitted asynchronous task. Returns the current status and results if completed. Use this after submitting a task to see if it's done.
+    zh_Hans: 检查先前提交的异步任务的状态。如果完成，则返回当前状态和结果。在提交任务后使用此工具查看是否完成。
+  llm: Check the status of a previously submitted asynchronous task using its Task ID.
+parameters:
+  - name: agent_name
+    type: string
+    required: true
+    label:
+      en_US: Agent Name
+      zh_Hans: 智能体名称
+    human_description:
+      en_US: The name of the agent to call (must be in the Agents Registry).
+      zh_Hans: 要调用的智能体名称 (必须在智能体注册表中)。
+    form: llm
+  - name: task_id
+    type: string
+    required: true
+    label:
+      en_US: Task ID
+      zh_Hans: 任务 ID
+    human_description:
+      en_US: The ID of the task to check.
+      zh_Hans: 要检查的任务 ID。
+    form: llm
+extra:
+  python:
+    source: tools/get_task_status.py
